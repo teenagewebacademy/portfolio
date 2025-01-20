@@ -12112,6 +12112,7 @@ section {
   aspect-ratio: 1/1;
 }
 .part3__text {
+  background-color: #ffffff;
   padding: 20px 30px;
   text-align: center;
   box-shadow: 0 9px 20px #dadada;
@@ -12182,6 +12183,11 @@ footer {
   header .header {
     flex-direction: column-reverse;
   }
+  header .header img {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
   header h5, header .h5 {
     font-size: 1.5rem;
   }
@@ -12196,6 +12202,9 @@ footer {
   }
 }
 @media (max-width: 767px) {
+  .header img {
+    width: 100% !important;
+  }
   .part4 .row {
     flex-direction: column-reverse;
   }

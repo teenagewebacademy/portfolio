@@ -167,6 +167,7 @@ section {
     }
 
     &__text {
+        background-color: #ffffff;
         padding: 20px 30px;
         text-align: center;
         box-shadow: 0 9px 20px #dadada;
@@ -266,6 +267,11 @@ footer{
     header {
         .header {
             flex-direction: column-reverse;
+            img {
+                width: 70%;
+                margin: auto;
+                display: block;
+            }
         }
 
         h5 {
@@ -289,6 +295,11 @@ footer{
 }
 
 @media(max-width:767px) {
+    .header{
+        img {
+            width: 100% !important;
+        }
+    }
 
     //=================== part4 ===================
     .part4 .row {
