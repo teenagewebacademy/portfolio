@@ -1,0 +1,46 @@
+// $main-color: #f8f9fa;
+// $sec-color: #091057;
+// $third-color: #EC8305;
+
+$prolight-color:  #F0F0F0;
+$light-color: #E5D283;
+$dark-color: #4F709C;
+$prodark-color: #213555;
+
+$theme-colors: (
+    "mina":hotpink,
+    "warning": $light-color,
+    "light": $prolight-color,
+    "dark": $dark-color
+);
+
+
+$font:#5b5b5b;
+
+// $theme-colors: (
+//     "prolight":$prolight-color,
+//     "light":$light-color,
+//     "dark":$dark-color,
+//     "prodark":$prodark-color,
+// );
+
+
+$utilities: (
+    "text-align": (responsive: true,
+        property: text-align,
+        class: text,
+        values: (start: right,
+            end: left,
+            center: center,
+        )),
+);
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+);
