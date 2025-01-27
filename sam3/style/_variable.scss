@@ -1,0 +1,58 @@
+// $first-color: #9a0680;
+// $sec-color: #79018c;
+// $third-color: #4c0070;
+// $fourth-color: #160040;
+
+$first-color: #EBF4F6;
+$sec-color: #37B7C3;
+$third-color: #088395;
+$fourth-color: #071952;
+
+// $first-color: #F4F6FF;
+// $sec-color: #F3C623;
+// $third-color: #EB8317;
+// $fourth-color: #10375C;
+
+$light-font:  #F0F0F0;
+
+
+
+$theme-colors: (
+    "first":$first-color,
+    "sec": $sec-color,
+    "third": $third-color,
+    "fourth": $fourth-color,
+    "font_light":$light-font,
+
+    // ==============================
+
+    // "prolight":$prolight-color,
+    // "light":$light-color,
+    // "dark":$dark-color,
+    // "prodark":$prodark-color,
+);
+
+
+$font:#5b5b5b;
+
+
+
+$utilities: (
+    "text-align": (responsive: true,
+        property: text-align,
+        class: text,
+        values: (start: right,
+            end: left,
+            center: center,
+        )),
+);
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+);

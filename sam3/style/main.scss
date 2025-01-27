@@ -1,0 +1,387 @@
+@import './variable';
+@import './public';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('../../WebFonts/WebFonts/css/style.css');
+@import '../../bootstrap/bootstrap/scss/bootstrap.scss';
+
+//==================================== menu ====================================
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.logo {
+    width: 60px;
+}
+
+.nav-item,
+.navbar-toggler-icon {
+    color: whitesmoke !important;
+    fill: whitesmoke;
+}
+
+.nav-item>.active {
+    color: white;
+}
+
+//==================================== header ====================================
+
+.header {
+    color: $light-font;
+
+    &_container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__text {
+        p {
+            margin: 2.5rem 0 3rem;
+        }
+
+        span {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.8rem;
+        }
+    }
+
+    &__imagecontainer {
+        padding: 3rem 0;
+        width: 100%;
+        aspect-ratio: 1/1;
+
+        &--imagebox {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+
+            &::before {
+                content: " ";
+                width: 80%;
+                height: 80%;
+                background-color: $sec-color;
+                position: absolute;
+                top: -20px;
+                right: -20px;
+                z-index: 1;
+                border-radius: 10px;
+
+            }
+
+            .text {
+                width: 150px;
+                min-height: 50px;
+                text-align: center;
+                padding: 10px 8px;
+                border: 3px solid $sec-color;
+                background-color: $fourth-color;
+                position: absolute;
+                bottom: -20px;
+                left: -20px;
+                z-index: 9;
+                border-radius: 10px;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid $sec-color;
+            position: absolute;
+            z-index: 9;
+        }
+    }
+}
+
+//==================================== about Us ====================================
+.aboutus {
+
+    &__imagebox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        .grid_image {
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #b6b6b6;
+            transition: all 0.4s linear;
+
+            &:hover {
+                box-shadow: 0 0 20px #b6b6b6;
+
+                img {
+                    transform: scale(1.2);
+
+                }
+            }
+        }
+
+        img {
+            aspect-ratio: 1/1;
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.4s linear;
+        }
+
+
+
+        .grid_image:nth-child(1) {
+            width: 90%;
+            justify-self: flex-end;
+        }
+
+        .grid_image:nth-child(2) {
+            width: 80%;
+            align-self: flex-end;
+        }
+
+        .grid_image:nth-child(3) {
+            width: 100%;
+        }
+
+        .grid_image:nth-child(4) {
+            width: 90%;
+        }
+
+    }
+
+    &__textbox {
+
+        @extend .textbox;
+
+        .items_container {
+            .items {
+                display: grid;
+                text-align: center;
+            }
+        }
+    }
+}
+
+//=================== scope_part ===================
+
+#scope_part {
+    padding-top: 50px;
+
+    .textbox {
+        @extend .textbox;
+
+        span {
+            border-color: $sec-color !important;
+
+        }
+    }
+
+    .question {
+        margin-top: 20px;
+        border: 1px solid #dddddd;
+        border-radius: 0.5rem;
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+
+            &::marker {
+                content: '';
+            }
+
+            &>i {
+                transform: translateY(12px);
+                margin-left: 10px;
+            }
+
+            span>i {
+                color: #37B7C3;
+                font-size: 1.8rem;
+                vertical-align: -webkit-baseline-middle;
+                margin-left: 5px;
+            }
+
+        }
+
+        details {
+            padding: 10px;
+
+            p {
+                margin-top: 1rem;
+                color: #7e7e7e;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            &[open] i {
+                transform: translateY(-12px) rotateZ(180deg);
+            }
+        }
+
+    }
+}
+
+.part2,
+#scope {
+    .circle {
+        padding: 12px;
+        box-shadow: 0 9px 20px #dadada;
+        background-color: #ffffff;
+        width: 80px;
+        margin: auto;
+        border-radius: 50%;
+
+        &__mini {
+            width: 65px !important;
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    &__text {
+        background-color: #ffffff;
+        padding: 20px 30px;
+        text-align: center;
+        box-shadow: 0 9px 20px #dadada;
+        border-radius: 50%;
+        aspect-ratio: 4 / 2;
+        align-items: center;
+        display: flex;
+    }
+}
+
+//==================================== services ====================================
+
+.services {
+    &__part1 {
+        position: relative;
+        background-image: url('../images/session5.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+
+        &--bg {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            top: 0;
+            background: linear-gradient(90deg, rgba(8, 131, 150, 0.9), rgb(8, 25, 82, 0.9));
+        }
+
+        &--text {
+            width: 100%;
+            // height: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: $light-font;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            margin-top: 80px;
+            padding: 0 1rem;
+        }
+    }
+
+    &__part2 {
+        .row {
+            background-color: white;
+            margin-top: -80px;
+        }
+    }
+
+    img {
+        // border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        display: block;
+    }
+}
+
+//====================================  ====================================
+
+//==================================== footer ====================================
+footer {
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+
+    i {
+        white-space: nowrap;
+        margin-left: 5px;
+    }
+}
+
+
+//==================================== gotop ====================================
+
+.gotop {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    bottom: 50px;
+    left: 50px;
+    background-color: white;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    color: $fourth-color;
+    border: 1px solid #d6d9da;
+    box-shadow: 0 0 2rem #c5c1c1ab;
+    font-size: 1.6rem;
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+//***************************************************************************************************
+
+
+@media(max-width:992px) {
+
+    //=================== header ===================
+    .header {
+        &_container {
+            flex-direction: column-reverse !important;
+
+        }
+
+        &__imagecontainer {
+            padding: 1rem 0 2rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    //=================== go top ===================
+    .gotop {
+        bottom: 20px;
+        left: 20px;
+    }
+}

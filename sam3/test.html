@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .box{
+            width:400px;
+            margin-top: 50px;
+        }
+        .header_imageside{
+            position: relative;
+            width: 100%;
+            z-index: 2;
+        }
+        .header_image{
+            width: 100%;
+        }
+        .header_imageside::before{
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background-color: aqua;
+            top: -40px;
+            right: -40px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box header">
+        <div class="header_imageside">
+            <img class="header_image" src="./images/session5.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
